@@ -54,7 +54,7 @@ export default new Router({
       component: NewArticle,
       beforeEnter: (to, from, next) => {
         if (window.localStorage.getItem('token') && window.localStorage.getItem('username')) {
-          next(username)
+          next()
         } else {
           next(false)
         }
